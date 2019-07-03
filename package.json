@@ -10,17 +10,21 @@
     "express": "latest",
     "mongoose": "latest",
     "passport": "latest",
-    "passport-http": "latest"
+    "passport-http": "latest",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {},
   "scripts": {
     "start": "DEBUG=server:* node index.js",
-    "test": "node tests.js"
+    "test": "node tests.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "mvc",
     "express.js"
   ],
   "author": "Ishan Marikar <ishan.marikar@outlook.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
